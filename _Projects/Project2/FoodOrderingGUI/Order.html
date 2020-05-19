@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+    <body style="background-color: #0066ff">
+        <script>
+            function processOrder(){
+                var items = document.getElementsByName('option');
+				var selectedItems="";
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox' && items[i].checked==true)
+						selectedItems+=items[i].value+"\n";
+                    else if(items[i].type=='radio' && items[i].checked)
+						selectedItems+=items[i].value+"\n";
+				}
+				alert(selectedItems);
+            }
+        </script>
+
+        <table bordercolor=red colspan="2" align="center" cellspacing="0">
+            <tr>
+                <th style="background-color: white"> <img src="Dominos.PNG">
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor=red colspan="2" style="background-color: white; padding-left: 200px; padding-right: 200px; padding-top: 50px">
+                    <h2 style="padding-left: 25px">Select an Option:</h2> 
+                    <input type="checkbox" name="option" value="Pickup"> Pickup?
+                    <input type="checkbox" name="option" value="Delivery">Delivery?<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: white; padding-left: 200px; padding-right: 200px; padding-top: 20px">
+                    <h3 style="padding-left: 25px">Pizza Style: </h3> 
+                    <input type="checkbox" name="option" value="Thin Crust"> Thin Crust<br> 
+                    <input type="checkbox" name="option" value="Medium Crust">Medium Crust<br>
+                    <input type="checkbox" name="option" value="Pan Crust"> Pan Crust
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: white; padding-left: 200px; padding-right: 200px; padding-top: 20px">
+                    <h3 style="padding-left: 25px">Pizza Size: </h3> 
+                    <input type="radio" name="option" value="Small Pizza"> Small<br> 
+                    <input type="radio" name="option" value="Medium Pizza">Medium<br>
+                    <input type="radio" name="option" value="Large Pizza"> Large
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: white; padding-left: 200px; padding-right: 200px; padding-top: 20px">
+                    <h3 style="padding-left: 25px">Pizza Toppings: </h3> 
+                    <input type="checkbox" name="option" value="Pepperoni"> Pepperoni 
+                    <input type="checkbox" name="option" value="Sausage">Sausage
+                    <input type="checkbox" name="option" value="Ham"> Ham<br><br>
+                    <input type="checkbox" name="option" value="Pineapples"> Pineapple
+                    <input type="checkbox" name="option" value="Onions"> Onion
+                    <input type="checkbox" name="option" value="Mushrooms"> Mushrooms
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: white; padding-left: 225px; padding-right: 200px; padding-top: 30px; padding-bottom: 20px">
+                    <input type="submit" value="Submit Order" onclick='processOrder()'/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
